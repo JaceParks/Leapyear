@@ -3,6 +3,7 @@ def again(verifiedyear):
     #year = input("please enter a valid year: ") 
 
     #verifiedyear = int(year)
+    verifiedyear = int(verifiedyear)
 
     d4i = verifiedyear / 4
     d100i = verifiedyear / 100

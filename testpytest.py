@@ -1,19 +1,15 @@
 import pytest
 import unittest
 import leapyearWOE
+import sys
 
 def pytest():
     #pytest test
-    s = input("Give me good input for 4 case: ")
-    assert leapyearWOE.again(int(s)) == True
-    s = input("Give me bad input for 4 case: ")
-    assert leapyearWOE.again(int(s)) == False
-    s = input("Give me bad input for 100: ")
-    assert leapyearWOE.again(int(s)) == False
-    s = input("Give me good input for 400: ")
-    assert leapyearWOE.again(int(s)) == True
-    s = input("Give me bad input for 400: ")
-    assert leapyearWOE.again(int(s)) == False
+    assert leapyearWOE.again(sys.argv[0]) == True
+    assert leapyearWOE.again(int(sys.argv[1])) == False
+    assert leapyearWOE.again(int(sys.argv[2])) == False
+    assert leapyearWOE.again(int(sys.argv[3])) == True
+    assert leapyearWOE.again(int(sys.argv[4])) == False
 
 print("----------PYTEST----------")
 pytest()
