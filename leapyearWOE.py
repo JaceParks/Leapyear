@@ -1,22 +1,20 @@
-def again():  
+def again(verifiedyear):  
 
-    year = input("please enter a valid year: ") 
+    #year = input("please enter a valid year: ") 
 
-    verifiedyear = int(year)
+    #verifiedyear = int(year)
 
     d4i = verifiedyear / 4
     d100i = verifiedyear / 100
     d400i = verifiedyear / 400
 
     if d400i.is_integer():
-        print(str(verifiedyear) + " is a valid leap year!")
+        return True
     elif d100i.is_integer():
-        print(str(verifiedyear) + " is not a valid leap year")
+        return False
     elif d4i.is_integer():
-        print(str(verifiedyear) + " is a valid leap year!")                                                                                     
+        return True
     else:
-        print(str(verifiedyear) + " is not a valid leap year")
-    again()
-
+        return True
 again()
 
